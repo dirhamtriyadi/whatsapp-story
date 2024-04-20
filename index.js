@@ -1,5 +1,5 @@
-const { default: makeWASocket } = require('@adiwajshing/baileys')
-const { DisconnectReason, useMultiFileAuthState } = require('@adiwajshing/baileys')
+const { default: makeWASocket } = require('@jcteh8885/baileys')
+const { DisconnectReason, useMultiFileAuthState } = require('@jcteh8885/baileys')
 const fs = require('fs')
 
 const main = async () => {
@@ -38,7 +38,7 @@ const main = async () => {
     const getGroup = async (sock) => {
         if (!fs.existsSync('./group_id.txt')) {
             const group_metadata = await sock.groupCreate('Hasil Kontak', [])
-            const text = 'Top Up Game Murah, Cepat, dan Aman. cek: https://tokosalis.com'
+            const text = 'Testing'
             await sock.sendMessage(group_metadata.id, { text })
             fs.writeFileSync('./group_id.txt', group_metadata.id)
             return group_metadata.id
