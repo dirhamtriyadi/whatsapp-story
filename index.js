@@ -1,5 +1,5 @@
-const { default: makeWASocket } = require('@jcteh8885/baileys')
-const { DisconnectReason, useMultiFileAuthState } = require('@jcteh8885/baileys')
+const { default: makeWASocket } = require('baileys')
+const { DisconnectReason, useMultiFileAuthState } = require('baileys')
 const fs = require('fs')
 
 const main = async () => {
